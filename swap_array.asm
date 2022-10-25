@@ -223,7 +223,7 @@ doSwap:
 	 la $v0, myArray
          la $v1, myArray
 	  addiu $v1,$v1,44
-          addiu $v1,$v1,4
+          addiu $v0,$v0,4
           li $t4, 0
         loop:
 beq $t4, 3, loopexit
