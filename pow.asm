@@ -32,7 +32,7 @@ li $v0, 5   #read in int
 syscall
 move $t0, $v0   #put int in t0
 
-la $a0,str1 #Load and print string asking for num
+la $a0,str2 #Load and print string asking for num
 li $v0,4
 syscall
 li $v0, 5   #read in int
@@ -42,4 +42,13 @@ move $t1, $v0   #put int in t0
 	# TODO: Write your code here
 
 exit:
-	# TODO: Write code to properly exit a SPIM simulation
+	
+	        # TODO: Write code to properly exit a SPIM simulation
+        la $a0,str3 #Load and print string asking for num
+        li $v0,4
+        syscall
+            li $v0,1
+            move $a0, $t3
+            syscall
+        	li $v0, 10
+	syscall
