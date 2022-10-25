@@ -230,7 +230,7 @@ doSwap:
    lw $t1, 0($v1)
      sw $t0, 0($v1)
    sw $t1, 0($v0)
-addiu addiu $v1,$v1,-8
+addiu  $v1,$v1,-8
 addiu $v0,$v0,8
         loopexit:
         # do not remove this last line
