@@ -232,6 +232,7 @@ doSwap:
    sw $t1, 0($v0)
 addiu  $v1,$v1,-8
 addiu $v0,$v0,8
+j loop
         loopexit:
         # do not remove this last line
            jr $ra
