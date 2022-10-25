@@ -16,13 +16,32 @@ main:
 la $a0,str1 #Load and print string asking for num
 li $v0,4
 syscall
-la $a0,str2 #Load and print nextline
+la $a0,str3 #Load and print nextline
 li $v0,4
 syscall
 li $v0, 5   #read in int
 syscall
 move $t0, $v0   #put int in t0
 
+la $a0,str1 #Load and print string asking for num
+li $v0,4
+syscall
+la $a0,str3 #Load and print nextline
+li $v0,4
+syscall
+li $v0, 5   #read in int
+syscall
+move $t1, $v0   #put int in t0
+
+la $a0,str1 #Load and print string asking for num
+li $v0,4
+syscall
+la $a0,str3 #Load and print nextline
+li $v0,4
+syscall
+li $v0, 5   #read in int
+syscall
+move $t2, $v0   #put int in t0
         # TODO: Write your code here
     # You can have other labels expressed here, if you need to
 
