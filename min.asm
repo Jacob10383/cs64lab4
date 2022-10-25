@@ -11,6 +11,8 @@
 
 #Text Area (i.e. instructions)
 .text
+
+main:
 la $a0,str1 #Load and print string asking for num
 li $v0,4
 syscall
@@ -20,7 +22,6 @@ syscall
 li $v0, 5   #read in int
 syscall
 move $t0, $v0   #put int in t0
-main:
 
         # TODO: Write your code here
     # You can have other labels expressed here, if you need to
