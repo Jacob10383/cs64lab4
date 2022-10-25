@@ -165,9 +165,7 @@ main:
         jal printArray
          lw $a0, 40($t0)
 	 lw $a0, 44($t0)
-	 addu $t0,$a0,$zero    # $t0 = $a0
-addu $a0,$a1,$zero    # $a0 = $a1
-addu $a1,$t0,$zero    # $a1 = $t0 (swapping $a0 and $a1)
+	 addiu $a1,$a1,4    # $t0 = $a0
         # Do swap function 
         jal doSwap
 	
