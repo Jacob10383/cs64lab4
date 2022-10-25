@@ -220,11 +220,13 @@ doSwap:
         # y-=2; 
         # }
 
-	li $t0, 1
-	li $t1,7
+	 la $v0, myArray
+         la $v1, myArray
+	  addiu $v1,$v1,44
+          li $t0, 0
         loop:
-	blt $t0, $t1, loopexit
-	 mul $t2,$t0,4         # multiple $v0 and $a0 into $v0 
+	beq $t0, 3, loopexit
+	
 	
 
         loopexit:
