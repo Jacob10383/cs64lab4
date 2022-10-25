@@ -165,13 +165,13 @@ main:
         jal printArray
 	
 	
-	 la $s1, myArray
-	  addiu $s1,$s1,4
-  lw $t0, 16($s1)
-  lw $t1, 36($s1)
+	# la $s1, myArray
+	#  addiu $s1,$s1,4
+ #  lw $t0, 16($s1)
+  # lw $t1, 36($s1)
   
-  sw $t0, 36($s1)
-  sw $t1, 16($s1)
+  # sw $t0, 36($s1)
+  # sw $t1, 16($s1)
 
   
         # Do swap function 
@@ -226,8 +226,10 @@ doSwap:
           li $t0, 0
         loop:
 	beq $t0, 3, loopexit
-	
-	
+ lw $t0, 0($v0)
+   lw $t1, 0($v1)
+     sw $t0, 0($v1)
+   sw $t1, 0($v0)
 
         loopexit:
         # do not remove this last line
