@@ -163,7 +163,8 @@ main:
         syscall
 
         jal printArray
-	 addiu $a0,$a0,4    # $t0 = $a0
+	 la $t0, myArray
+	 addiu $t0,$t0,4    # $t0 = $a0
         # Do swap function 
         jal doSwap
 	
