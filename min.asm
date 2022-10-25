@@ -35,10 +35,37 @@ syscall
 li $v0, 5   #read in int
 syscall
 move $t2, $v0   #put int in t0
+blt $t0, $t1, 1
+blt $t1, $t2, 4
+j 5
+1:
+blt $t0, $2, 2
+j 3
+2:
+li $t3, $t0
+j exit
+3:
+li $t3, $t2
+j exit
+4:
+li $t3, $t1
+j exit
+5:
+li $t3, $t2
+j exit
+
+
         # TODO: Write your code here
     # You can have other labels expressed here, if you need to
 
 exit:
         # TODO: Write code to properly exit a SPIM simulation
+        la $a0,str2 #Load and print string asking for num
+        li $v0,4
+        syscall
+        la $a0,t3 #Load and print string asking for num
+            li $v0,4
+            syscall
         	li $v0, 10
 	syscall
+    
