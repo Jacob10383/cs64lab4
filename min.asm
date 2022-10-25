@@ -63,8 +63,8 @@ exit:
         la $a0,str2 #Load and print string asking for num
         li $v0,4
         syscall
-        la $a0,$t3 #Load and print string asking for num
-            li $v0,4
+            li $v0,1
+            move $a0, $t3
             syscall
         	li $v0, 10
 	syscall
