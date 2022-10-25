@@ -17,7 +17,7 @@
 .data
 	str1: .asciiz "Enter a number x:\n"
 	str2: .asciiz "Enter the exponent n:\n"
-	str3: .asciiz "Power(x,n) is:\n" << pow << "\n"
+	str3: .asciiz "Power(x,n) is:\n"
 
 
 	# TODO: Write your initializations here
