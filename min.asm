@@ -42,16 +42,16 @@ one:
 blt $t0, $2, two
 j three
 two:
-li $t3, $t0
+move $t3, $t0
 j exit
 three:
-li $t3, $t2
+move $t3, $t2
 j exit
 four:
-li $t3, $t1
+move $t3, $t1
 j exit
 five:
-li $t3, $t2
+move $t3, $t2
 j exit
 
 
