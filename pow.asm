@@ -55,8 +55,8 @@ exit:
         la $a0,str3 #Load and print string asking for num
         li $v0,4
         syscall
+             move $a0, $v0
             li $v0,1
-            move $a0, $v0
             syscall
         	li $v0, 10
 	syscall
