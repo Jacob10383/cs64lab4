@@ -40,10 +40,10 @@ syscall
 move $t1, $v0   #put int in t1
 
 add $t2,$zero,$zero 
-addi $v0,$v0,1
+addi $t3,$t3,1
 power: 
 	beq $t2, $t1, exit   
-        mul $v0,$v0,$t0         # multiple $v0 and $a0 into $v0 
+        mul $t3,$t3,$t0         # multiple $v0 and $a0 into $v0 
         addi $t2,$t2,1          # update the value of $t2   
         j   power
 	
@@ -55,7 +55,7 @@ exit:
         la $a0,str3 #Load and print string asking for num
         li $v0,4
         syscall
-             move $a0, $v0
+             move $a0, $t3
             li $v0,1
             syscall
         	li $v0, 10
