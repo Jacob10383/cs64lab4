@@ -166,9 +166,10 @@ main:
 	
 	
 	 la $s1, myArray
+	  addiu $t1,$t1,4
   lw $t0, 16($s1)
   lw $t1, 36($s1)
-  addiu $t1,$t1,4
+  
   sw $t0, 36($s1)
   sw $t1, 16($s1)
 
