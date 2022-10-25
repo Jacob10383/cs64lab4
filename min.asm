@@ -35,22 +35,22 @@ syscall
 li $v0, 5   #read in int
 syscall
 move $t2, $v0   #put int in t0
-blt $t0, $t1, 1
-blt $t1, $t2, 4
-j 5
-1:
-blt $t0, $2, 2
-j 3
-2:
+blt $t0, $t1, one
+blt $t1, $t2, four
+j five
+one:
+blt $t0, $2, two
+j three
+two:
 li $t3, $t0
 j exit
-3:
+three:
 li $t3, $t2
 j exit
-4:
+four:
 li $t3, $t1
 j exit
-5:
+five:
 li $t3, $t2
 j exit
 
