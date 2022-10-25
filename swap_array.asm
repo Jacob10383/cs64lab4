@@ -216,7 +216,12 @@ doSwap:
         # y-=2; 
         # }
 
+	li $t0, 1
+	li $t1,7
         loop:
+	blt $t0, $t1, loopexit
+	 mul $t2,$t0,4         # multiple $v0 and $a0 into $v0 
+	
 
         loopexit:
         # do not remove this last line
