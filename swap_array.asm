@@ -166,8 +166,10 @@ main:
 	
 	
 	 la $s1, myArray
-	   lw $t0, 16($s1)
-  addiu $t0, $t0,4
+  lw $t0, 16($s1)
+  lw $t1, 36($s1)
+  sw $t0, 36($s1)
+  sw $t1, 16($s1)
 
   
         # Do swap function 
