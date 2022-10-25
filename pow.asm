@@ -37,7 +37,15 @@ li $v0,4
 syscall
 li $v0, 5   #read in int
 syscall
-move $t1, $v0   #put int in t0
+move $t1, $v0   #put int in t1
+
+add $t2,$zero,$zero 
+addi $v0,$v0,1
+power: 
+	beq $t2, $t1, exit   
+        mul $v0,$v0,$t0         # multiple $v0 and $a0 into $v0 
+        addi $t2,$t2,1          # update the value of $t2   
+        j   power
 	
 	# TODO: Write your code here
 
