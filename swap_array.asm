@@ -223,15 +223,16 @@ doSwap:
 	 la $v0, myArray
          la $v1, myArray
 	  addiu $v1,$v1,44
-          li $t0, 0
+          li $t4, 0
         loop:
-	beq $t0, 3, loopexit
+	beq $t4, 3, loopexit
  lw $t0, 0($v0)
    lw $t1, 0($v1)
      sw $t0, 0($v1)
    sw $t1, 0($v0)
 addiu  $v1,$v1,-8
 addiu $v0,$v0,8
+addiu $t4, $t4,1
 j loop
         loopexit:
         # do not remove this last line
