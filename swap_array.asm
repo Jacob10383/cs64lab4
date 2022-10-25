@@ -184,7 +184,9 @@ main_failed:
         li $v0, 4
         syscall
         
-main_exit:      
+main_exit:
+        	li $v0, 10
+	syscall
 	# TODO: Write code to properly exit a SPIM simulation
 
         
