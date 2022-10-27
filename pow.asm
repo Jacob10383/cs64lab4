@@ -52,11 +52,11 @@ power:
 exit:
 	
 	        # TODO: Write code to properly exit a SPIM simulation
-        la $a0,str3 #Load and print string asking for num
+        la $a0,str3 #Load and print string "Power(x,n) is:\n"
         li $v0,4
         syscall
              move $a0, $t3
-            li $v0,1
+            li $v0,1  "print value from t3 moved into a0
             syscall
         	li $v0, 10
 	syscall
